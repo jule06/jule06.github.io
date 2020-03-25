@@ -3,10 +3,22 @@
 
 $(document).ready(function() {
 
-    $('html').addClass('js-enabled');
+    //$('html').addClass('js-enabled');
 
-    setup_nivo_lightbox();
+    //$(window).load(function() {
+        //$(".js-preloader").fadeOut(0, function() {
+          //  $(".js-main-container").fadeIn(0);
+
+            //setup_scrollreveal();
+            //setup_progress_bar_animation();
+        //});
+    //});
+
+	setup_nivo_lightbox();
     setup_dense();
+	
+	
+    //$('html').addClass('js-enabled');
 
     $(window).load(function() {
         $(".js-preloader").fadeOut(800, function() {
@@ -16,7 +28,7 @@ $(document).ready(function() {
             setup_progress_bar_animation();
         });
     });
-
+	
 });
 
 
