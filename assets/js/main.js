@@ -10,6 +10,9 @@ $(document).ready(function() {
 
     $(window).load(function() {
         $(".js-preloader").fadeOut(800, function() {
+            setup_flags();
+        });
+        $(".js-preloader").fadeOut(800, function() {
             $(".js-main-container").fadeIn(800);
 
             setup_scrollreveal();
@@ -19,7 +22,10 @@ $(document).ready(function() {
 
 });
 
-
+function setup_flags(){
+    $('#sp_btn').attr("src", "https://img.icons8.com/doodle/48/000000/spain-2.png");
+    $('#en_btn').attr("src", "https://img.icons8.com/doodle/48/000000/great-britain.png");
+}
 
 function setup_progress_bar_animation()
 {
@@ -30,13 +36,12 @@ function setup_progress_bar_animation()
         var window_height = $window.height();
         var window_top_position = $window.scrollTop();
         var window_bottom_position = (window_top_position + window_height);
-
         $.each($animation_elements, function() {
             var $element = $(this);
             var element_height = $element.outerHeight();
             var element_top_position = $element.offset().top;
             var element_bottom_position = (element_top_position + element_height);
-
+            
             // Check to see if this current container is within viewport
             if ((element_bottom_position >= window_top_position) &&
                 (element_top_position <= window_bottom_position)) {

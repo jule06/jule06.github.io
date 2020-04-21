@@ -27,8 +27,8 @@
         <link rel="stylesheet" href="assets/css/main.css">
         
         <!-- Themes -->
-        <link rel="stylesheet" href="assets/css/themes.light.css">
-        <!--<link rel="stylesheet" href="assets/css/themes.dark.css">-->
+        <!-- <link rel="stylesheet" href="assets/css/themes.light.css"> -->
+        <link rel="stylesheet" href="assets/css/themes.dark.css">
         
         <!-- Custom CSS -->
         <!--<link rel="stylesheet" href="assets/css/custom.css">-->
@@ -47,7 +47,10 @@
 
         <!-- Main JS -->
         <script src="assets/js/main.js"></script>
-
+           
+        
+        <!-- Main JS -->
+        <script src="assets/js/languages.js"></script>
     </head>
 
     <body>
@@ -66,7 +69,6 @@
 
                     <div class="o-container">
                         <div class="o-section__container">
-
                             <header class="o-section__header  c-header__header  t-section__header">
                                 <div class="c-header__inner-header">
 
@@ -82,7 +84,7 @@
                             <div class="o-section__content  c-header__content  t-section__content">
                                 <div class="c-header__inner-content">
 
-                                    <div class="c-header__top">
+                                    <div style="margin-bottom: 0px;" class="c-header__top">
 
                                         <div class="c-header__brand">
 
@@ -98,10 +100,13 @@
                                                     </span>
                                                 </h1>
                                                 <h2 class="a-header  c-brand__sub-title  t-sub-title">
-                                                    <span class="c-brand__sizer">
-                                                        Senior Java Developer
+                                                    <span id="job_desc" class="c-brand__sizer">
                                                     </span>
                                                 </h2>
+                                                <div>
+                                                    <img id="sp_btn" style="cursor: pointer;" onclick="toSpanish()" height="30" width="30"  />
+                                                    <img id="en_btn" style="cursor: pointer;" onclick="toEnlgish()" height="30" width="30" />
+                                                </div>
                                             </div><!-- /c-brand -->
 
                                         </div><!-- /c-header__brand -->
@@ -136,7 +141,7 @@
                                             <div class="o-grid__col-md-3  o-grid__col-sm-6">
                                                 <div class="a-header  o-content">
                                                     <div class="o-content__body">
-                                                        <h4>Location</h4>
+                                                        <h4 class="location_id"></h4>
                                                         <address>
                                                             Argentina, Buenos Aires, Capital Federal
                                                         </address>
@@ -147,7 +152,7 @@
                                             <div class="o-grid__col-md-3  o-grid__col-sm-6">
                                                 <div class="a-header  o-content">
                                                     <div class="o-content__body">
-                                                        <h4>Phone</h4>
+                                                        <h4 class="phone_id"></h4>
                                                         <p>
                                                             +549 11-6488-2032
                                                         </p>
@@ -159,7 +164,7 @@
                                                 <div class="a-header  o-content">
                                                     <div class="o-content__body">
                                                         <a href="#" target="_blank" class="t-link-container">
-                                                            <h4>Web</h4>
+                                                            <h4 class="web"></h4>
                                                             <p>
                                                                 <span class="t-link-container__item--blended">
                                                                     https://julianlopez.dev/
@@ -175,7 +180,7 @@
                                                 <div class="a-header  o-content">
                                                     <div class="o-content__body">
                                                         <a href="#" target="_blank" class="t-link-container">
-                                                            <h4>Email</h4>
+                                                            <h4 class="email"></h4>
                                                             <p>
                                                                 <span class="t-link-container__item--blended">
                                                                     jhulian10@gmail.com
@@ -218,8 +223,8 @@
                                 <h2 class="o-section__heading">
                                     Intro
                                 </h2>
-                                <div class="o-content__body  o-section__description">
-                                    About my self.
+                                <div id="mySelf_id" class="o-content__body  o-section__description">
+                                    
                                 </div>
                             </div>
                         </header><!-- /o-section__header -->
@@ -229,8 +234,7 @@
                             <div class="o-content">
                                 <div class="c-intro">
                                     <div class="o-content__body">
-                                        <p>
-                                                Dedicated and efficient full stack developer with 9+ years experience in application layers, presentation layers, and databases. I enjoy team work to grow professionally and learn from each other.
+                                        <p id="mySelf_desc_id">
                                         </p>
                                     </div>
                                 </div>
@@ -259,11 +263,9 @@
 
                         <header class="o-section__header  t-section__header">
                             <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Expertise
+                                <h2 id="expertise_id" class="o-section__heading">
                                 </h2>
-                                <div class="o-content__body  o-section__description">
-                                    Almost all
+                                <div id="expertise_desc_id" class="o-content__body  o-section__description">
                                 </div>
                             </div>
                         </header><!-- /o-section__header -->
@@ -281,10 +283,7 @@
                                         </div>
                                         <div class="o-media__body  o-content__body">
                                             <h3>Java</h3>
-                                            <p>
-                                                I have wokred with Java for almost ten years
-                                                I developed monolitics applications but at present 
-                                                I'm working with Micro services applications
+                                            <p id ="expertise_java_id">
                                             </p>
                                         </div>
                                     </div><!-- /o-media o-content -->
@@ -298,10 +297,8 @@
                                             </div>
                                         </div>
                                         <div class="o-media__body  o-content__body">
-                                            <h3>Databases</h3>
-                                            <p>
-                                                I have experiencie in: Oracle, Mysql and DB2
-                                                I'm learing about non relational databases    
+                                            <h3 id=expertise_db_title_id></h3>
+                                            <p id="expertise_db_id">
                                             </p>
                                         </div>
                                     </div><!-- /o-media o-content -->
@@ -315,11 +312,8 @@
                                             </div>
                                         </div>
                                         <div class="o-media__body  o-content__body">
-                                            <h3>Agile Methodologies</h3>
-                                            <p>
-                                                I have been working with SCRUM for seven years, 
-                                                also, I worked with others methodologies such as 
-                                                Kanban or XP   
+                                            <h3 id="expertise_agile_title_id"></h3>
+                                            <p id="expertise_agile_id">
                                             </p>
                                         </div>
                                     </div><!-- /o-media o-content -->
@@ -334,10 +328,7 @@
                                         </div>
                                         <div class="o-media__body  o-content__body">
                                             <h3>Front End</h3>
-                                            <p>
-                                                I have 9+ years of experience working with, I worked with a lot of differents front-end frameworks such as:
-                                                Angular 2+, Typescript, Javascript, Jquery, Jquery UI, Ajax, Sencha, Polymer, 
-                                                Bootstrap, Material, Html, CSS.
+                                            <p id="expertise_fe_id">
                                             </p>
                                         </div>
                                     </div><!-- /o-media o-content -->
@@ -367,11 +358,9 @@
 
                         <header class="o-section__header  t-section__header">
                             <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Skills
+                                <h2 id="skills" class="o-section__heading">
                                 </h2>
-                                <div class="o-content__body  o-section__description">
-                                    <!-- Description -->
+                                <div id="skills_desc" class="o-content__body  o-section__description">
                                 </div>
                             </div>
                         </header><!-- /o-section__header -->
@@ -710,10 +699,9 @@
 
                         <header class="o-section__header  t-section__header">
                             <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Experience
+                                <h2 id="experiences" class="o-section__heading">
                                 </h2>
-                                <div class="o-content__body  o-section__description">
+                                <div id="experiences_desc" class="o-content__body  o-section__description">
                                     <!-- Yes. I&#39;ve been around. -->
                                 </div>
                             </div>
@@ -728,14 +716,13 @@
                                     <div class="o-content">
                                         <div class="o-grid">
                                             <div class="o-grid__col-md-5">
-                                                <div class="c-work__timeframe">
+                                                <div id="experiences_date_present"class="c-work__timeframe">
                                                     2020 &ndash; Present
                                                 </div>
                                                 <h3 class="c-work__heading">
                                                     Emergencias
                                                 </h3>
-                                                <h4 class="c-work__title">
-                                                    Java Developr
+                                                <h4 class="work_title c-work__title">
                                                 </h4>
                                                 <div class="c-work__location">
                                                     Buenos Aires, Argentina
@@ -743,13 +730,13 @@
                                             </div>
                                             <div class="o-grid__col-md-7" style="padding-right: 0px">
                                                 <p style="font-style: italic;padding-top: 18px;">
-                                                    <a style="color: black">Clients:</a> GCBA - GPBA - Emergencias </br>
-                                                    <a style="color: black">Project:</a> Web Applicaton - Disease Control Ticket </br>
-                                                    <a style="color: black">Rol:</a> JAVA backend developer </br>
-                                                    <a style="color: black">Team composition:</a> Technical lead, 5 JAVA developers, 3 Front End developers, 3 Functional analysts, 2 QA </br>
-                                                    <a style="color: black">Tasks:</a> Features and bugs development, microservice architecture implementation</br>
-                                                    <a style="color: black">Agile methodologies:</a> Srcum (Daily - Planing Grooming - Retro)  </br>
-                                                    <a style="color: black">Techonologies, Frameworks and others:</a> Java 1.8, API Rest, Springboot, SpringCloud, SpringSecurity, Feign, Oracle, Flyway </br>
+                                                    <a class="clients" style="color: grey">Clients:</a>                             <a id="gcba_cli_desc"></a></br>
+                                                    <a class="proj" style="color: grey">Project:</a>                                <a id="gcba_proj_desc"></a></br>
+                                                    <a style="color: grey">Rol:</a>                                                 <a id="gcba_rol_desc"></a></br>
+                                                    <a class="team" style="color: grey">Team composition:</a>                       <a id="gcba_team_desc"></a></br>
+                                                    <a class="tasks" style="color: grey">Tasks:</a>                                 <a id="gcba_tasks_desc"></a></br>
+                                                    <a class="met" style="color: grey">Agile methodologies:</a>                     <a id="gcba_met_desc"></a></br>
+                                                    <a class="tech" style="color: grey">Techonologies, Frameworks and others:</a>   <a id="gcba_tech_desc"></a></br>
                                                 </p>
                                             </div>
                                         </div><!-- /o-grid -->
@@ -767,8 +754,7 @@
                                                 <h3 class="c-work__heading">
                                                     Enerminds
                                                 </h3>
-                                                <h4 class="c-work__title">
-                                                    Java Developr
+                                                <h4 class="work_title c-work__title">
                                                 </h4>
                                                 <div class="c-work__location">
                                                     Buenos Aires, Argentina
@@ -776,13 +762,13 @@
                                             </div>
                                             <div class="o-grid__col-md-7" style="padding-right: 0px">
                                                 <p style="font-style: italic;padding-top: 18px;">
-                                                    <a style="color: black">Clients:</a> Edenor - Edesur </br>
-                                                    <a style="color: black">Project:</a> Web Applicaton - Power Outage Monitoring‎ </br>
-                                                    <a style="color: black">Rol:</a> JAVA full stack developer </br>
-                                                    <a style="color: black">Team composition:</a>Technical lead, 3 JAVA full stack developers</br>
-                                                    <a style="color: black">Tasks:</a> Features and bugs development, Deploys, meetings with product owner, QA, Functional analysts</br>
-                                                    <a style="color: black">Agile methodologies:</a> Daily Team composition meetings </br>
-                                                    <a style="color: black">Techonologies, Frameworks and others:</a> Java 1.8, Javascipt, Angular 2+, CSS, Bootstrap, Material, JSON, API Rest, Springboot, Jpa, Git, Maven, Planio </br>
+                                                    <a class="clients" style="color: grey">Clients:</a>                             <a id="ener_cli_desc"></a></br>
+                                                    <a class="proj" style="color: grey">Project:</a>                                <a id="ener_proj_desc"></a></br>
+                                                    <a style="color: grey">Rol:</a>                                                 <a id="ener_rol_desc"></a></br>
+                                                    <a class="team" style="color: grey">Team composition:</a>                       <a id="ener_team_desc"></a></br>
+                                                    <a class="tasks" style="color: grey">Tasks:</a>                                 <a id="ener_tasks_desc"></a></br>
+                                                    <a class="met" style="color: grey">Agile methodologies:</a>                     <a id="ener_met_desc"></a></br>
+                                                    <a class="tech" style="color: grey">Techonologies, Frameworks and others:</a>   <a id="ener_tech_desc"></a></br>
                                                 </p>
                                             </div>
                                         </div><!-- /o-grid -->
@@ -800,8 +786,7 @@
                                                 <h3 class="c-work__heading">
                                                     Clarin
                                                 </h3>
-                                                <h4 class="c-work__title">
-                                                    Java Developr
+                                                <h class="work_title c-work__title">
                                                 </h4>
                                                 <div class="c-work__location">
                                                     Buenos Aires, Argentina
@@ -809,13 +794,13 @@
                                             </div>
                                             <div class="o-grid__col-md-7" style="padding-right: 0px">
                                                 <p style="font-style: italic;padding-top: 18px;">
-                                                    <a style="color: black">Client:</a> OSDE </br>
-                                                    <a style="color: black">Project:</a> Web application - Call Center </br>
-                                                    <a style="color: black">Rol:</a> JAVA full stack developer </br>
-                                                    <a style="color: black">Team composition:</a>Technical lead, 3 JAVA full stack developers  2 QA, 2 Functional analysis</br>
-                                                    <a style="color: black">Tasks:</a> Features and bugs development, Deploys, meetings with product owner</br>
-                                                    <a style="color: black">Agile methodologies:</a> Srcum (Daily - Planing Grooming - Retro) </br>
-                                                    <a style="color: black">Techonologies, Frameworks and others:</a> Java 1.6, Javasctip, Sencha, CSS, Hiberanate, Ajax, JSON, Struts2, SOAP, Oracle, JBoss, SVN, GIT, Maven, JIRA </br>
+                                                    <a class="clients" style="color: grey">Client:</a>                              <a id="clarin_cli_desc"></a></br>
+                                                    <a class="proj" style="color: grey">Project:</a>                                <a id="clarin_proj_desc"></a></br>
+                                                    <a style="color: grey">Rol:</a>                                                 <a id="clarin_rol_desc"></a></br>
+                                                    <a class="team" style="color: grey">Team composition:</a>                       <a id="clarin_team_desc"></a></br>
+                                                    <a class="tasks" style="color: grey">Tasks:</a>                                  <a id="clarin_tasks_desc"></a></br>
+                                                    <a class="met" style="color: grey">Agile methodologies:</a>                     <a id="clarin_met_desc"></a></br>
+                                                    <a class="tech" style="color: grey">Techonologies, Frameworks and others:</a>   <a id="clarin_tech_desc"></a></br>
                                                 </p>
                                             </div>
                                         </div><!-- /o-grid -->
@@ -833,8 +818,7 @@
                                                 <h3 class="c-work__heading">
                                                     Softtek
                                                 </h3>
-                                                <h4 class="c-work__title">
-                                                    Java Developr
+                                                <h4 class="work_title c-work__title">
                                                 </h4>
                                                 <div class="c-work__location">
                                                     Buenos Aires, Argentina
@@ -842,13 +826,13 @@
                                             </div>
                                             <div class="o-grid__col-md-7" style="padding-right: 0px">
                                                 <p style="font-style: italic;padding-top: 18px;">
-                                                    <a style="color: black">Client:</a> OSDE </br>
-                                                    <a style="color: black">Project:</a> Web Applicaton - Reimbursement of medical certificates </br>
-                                                    <a style="color: black">Rol:</a> JAVA full stack developer </br>
-                                                    <a style="color: black">Team composition:</a>Software architect, Technical lead, 3 JAVA full stack developers (QAs and Functional analysts client side)  </br>
-                                                    <a style="color: black">Tasks:</a> Features and bugs development</br>
-                                                    <a style="color: black">Agile methodologies:</a> Srcum (Daily - Planing Grooming - Retro) </br>
-                                                    <a style="color: black">Techonologies, Frameworks and others:</a> Java 1.6, Javasript, HTML, CSS, Jquery, Ajax, JSON, Struts2, Hibernate, SOAP, Oracle, Jboss, SVN, Maven, JIRA</br>
+                                                    <a class="clients" style="color: grey">Client:</a>                              <a id="sofftek_cli_desc"></a></br>
+                                                    <a class="proj" style="color: grey">Project:</a>                                <a id="sofftek_proj_desc"></a></br>
+                                                    <a style="color: grey">Rol:</a>                                                 <a id="sofftek_rol_desc"></a></br>
+                                                    <a class="team" style="color: grey">Team composition:</a>                       <a id="sofftek_team_desc"></a></br>
+                                                    <a class="tasks" style="color: grey">Tasks:</a>                                 <a id="sofftek_tasks_desc"></a></br>
+                                                    <a class="met" style="color: grey">Agile methodologies:</a>                     <a id="sofftek_met_desc"></a></br>
+                                                    <a class="tech" style="color: grey">Techonologies, Frameworks and others:</a>   <a id="sofftek_tech_desc"></a></br>
                                                 </p>
                                             </div>
                                         </div><!-- /o-grid -->
@@ -862,11 +846,10 @@
                                                 <div class="c-work__timeframe">
                                                     2010 &ndash; 2012
                                                 </div>
-                                                <h3 class="c-work__heading">|+
+                                                <h3 class="c-work__heading">
                                                     IBM
                                                 </h3>
-                                                <h4 class="c-work__title">
-                                                    Java Developr
+                                                <h4 class="work_title c-work__title">
                                                 </h4>
                                                 <div class="c-work__location">
                                                     Buenos Aires, Argentina
@@ -874,13 +857,13 @@
                                             </div>
                                             <div class="o-grid__col-md-7" style="padding-right: 0px">
                                                 <p style="font-style: italic;padding-top: 18px;">
-                                                    <a style="color: black">Client:</a> IBM </br>
-                                                    <a style="color: black">Project:</a> Web Applicaton - Financial orientation </br>
-                                                    <a style="color: black">Rol:</a> JAVA full stack developer </br>
-                                                    <a style="color: black">Team composition:</a> Technical lead, 3 JAVA full stack developers (QAs and Functional analysts client side) </br>
-                                                    <a style="color: black">Tasks:</a> Minor features and bugs development</br>
-                                                    <a style="color: black">Agile methodologies:</a> -</br>
-                                                    <a style="color: black">Techonologies, Frameworks and others:</a> Java 1.6, EJB, JSP, Servlet, HTML, Javascipt, DB2, IBM Was, SVN, Maven, JIRA</br>
+                                                    <a class="clients" style="color: grey">Client:</a>                              <a id="ibm_cli_desc"></a></br>
+                                                    <a class="proj" style="color: grey">Project:</a>                                <a id="ibm_proj_desc"></a></br>
+                                                    <a style="color: grey">Rol:</a>                                                 <a id="ibm_rol_desc"></a></br>
+                                                    <a class="team" style="color: grey">Team composition:</a>                       <a id="ibm_team_desc"></a></br>
+                                                    <a class="tasks" style="color: grey">Tasks:</a>                                 <a id="ibm_tasks_desc"></a></br>
+                                                    <a class="met" style="color: grey">Agile methodologies:</a>                     <a id="ibm_met_desc"></a></br>
+                                                    <a class="tech" style="color: grey">Techonologies, Frameworks and others:</a>   <a id="ibm_tech_desc"></a></br>
                                                 </p>
                                             </div>
                                         </div><!-- /o-grid -->
@@ -911,10 +894,9 @@
 
                         <header class="o-section__header  t-section__header">
                             <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Education
+                                <h2 id="education" class="o-section__heading">
                                 </h2>
-                                <div class="o-content__body  o-section__description">
+                                <div id="education_desc" class="o-content__body  o-section__description">
                                 </div>
                             </div>
                         </header><!-- /o-section__header -->
@@ -936,8 +918,7 @@
                                                     <h3 class="c-work__heading">
                                                         UAI - universidad abierta interamericana
                                                     </h3>
-                                                    <h4 class="c-work__title">
-                                                        Systems Engineering
+                                                    <h4 id="university_desc"  class="c-work__title">
                                                     </h4>
                                                     <div class="c-work__location">
                                                         Buenos Aires, Argentina
@@ -963,8 +944,7 @@
                                                     <h3 class="c-work__heading">
                                                         ESBA Flores
                                                     </h3>
-                                                    <h4 class="c-work__title">
-                                                        Bachelor of Economy Science
+                                                    <h4 id="school_desc"  class="c-work__title">
                                                     </h4>
                                                     <div class="c-work__location">
                                                         Buenos Aires, Argentina
@@ -1004,11 +984,9 @@
 
                         <header class="o-section__header  t-section__header">
                             <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Hobbies
+                                <h2 id="hobbies_title" class="o-section__heading">
                                 </h2>
-                                <div class="o-content__body  o-section__description">
-                                    Some hobbies that I have ...
+                                <div id="hobbies_desc"class="o-content__body  o-section__description">
                                 </div>
                             </div>
                         </header><!-- /o-section__header -->
@@ -1021,13 +999,9 @@
                                     <a class="c-image-overlay  t-image-overlay  js-lightbox" data-lightbox-hidpi="" data-lightbox-gallery="portfolio">
                                         <img src="assets/images/portfolio/football.png" alt="">
                                         <div class="c-image-overlay__content">
-                                            <h3>
-                                                Football
-                                            </h3>
-                                                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
-                                            <p>
-                                                I play this great sport every Saturdays with friends. I'm part of a team in an amateur local tournament 
-                                            </p>
+                                            <h3 id="football_title"></h3>
+                                            <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+                                            <p id="football_desc"> </p>
                                         </div>
                                     </a>
                                 </div><!-- /o-grid__col -->
@@ -1036,13 +1010,9 @@
                                     <a class="c-image-overlay  t-image-overlay  js-lightbox" data-lightbox-hidpi="" data-lightbox-gallery="portfolio">
                                         <img src="assets/images/portfolio/cook.png" alt="">
                                         <div class="c-image-overlay__content">
-                                            <h3>
-                                                Cook
-                                            </h3>
+                                            <h3 id="coocking_title"> </h3>
                                             <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
-                                            <p>
-                                                As a fan of culinary arts I enjoy cooking and trying new flavours
-                                            </p>
+                                            <p id="coocking_desc"> </p>
                                         </div>
                                     </a>
                                 </div><!-- /o-grid__col -->
@@ -1050,13 +1020,9 @@
                                         <a class="c-image-overlay  t-image-overlay  js-lightbox" data-lightbox-hidpi="" data-lightbox-gallery="portfolio">
                                             <img src="assets/images/portfolio/programming.png" alt="">
                                             <div class="c-image-overlay__content">
-                                                <h3>
-                                                    Programming
-                                                </h3>
-                                                    <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
-                                                <p>
-                                                    I like programming when I have free time.
-                                                </p>
+                                                <h3 id="programming_title"></h3>
+                                                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+                                                <p id="programming_desc"></p>
                                             </div>
                                         </a>
                                     </div><!-- /o-grid__col -->
@@ -1065,13 +1031,9 @@
                                         <a class="c-image-overlay  t-image-overlay  js-lightbox" data-lightbox-hidpi="" data-lightbox-gallery="portfolio">
                                             <img src="assets/images/portfolio/gym.png" alt="">
                                             <div class="c-image-overlay__content">
-                                                <h3>
-                                                        GYM
-                                                </h3>
-                                                <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
-                                                <p>
-                                                    It's the best place when I want to get away from it all.
-                                                </p>
+                                                <h3 id="gym_title"></h3>
+                                                <hr  class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
+                                                <p id="gym_desc"></p>
                                             </div>
                                         </a>
                                     </div><!-- /o-grid__col -->
@@ -1098,10 +1060,9 @@
 
                         <header class="o-section__header  t-section__header">
                             <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Contact
+                                <h2 id="contact" class="o-section__heading">
                                 </h2>
-                                <div class="o-content__body  o-section__description">
+                                <div id="contact_desc" class="o-content__body  o-section__description">
                                 </div>
                             </div>
                         </header><!-- /o-section__header -->
@@ -1114,7 +1075,7 @@
                                     <div class="o-grid__col-md-3  o-grid__col-sm-6">
                                         <div class="o-content">
                                             <div class="o-content__body">
-                                                <h4>Location</h4>
+                                                <h4 class="location_id"></h4>
                                                 <address>
                                                     Argentina, Buenos Aires, Capital Federal
                                                 </address>
@@ -1125,7 +1086,7 @@
                                     <div class="o-grid__col-md-3  o-grid__col-sm-6">
                                         <div class="o-content">
                                             <div class="o-content__body">
-                                                <h4>Phone</h4>
+                                                <h4 class="phone_id"></h4>
                                                 <p>
                                                     +549 11-6488-2032
                                                 </p>
@@ -1137,7 +1098,7 @@
                                         <div class="o-content">
                                             <div class="o-content__body">
                                                 <a href="#" target="_blank" class="t-link-container">
-                                                    <h4>Web</h4>
+                                                    <h4 class="web"></h4>
                                                     <p>
                                                         <span class="t-link-container__item--blended">
                                                             https://julianlopez.dev/
@@ -1152,7 +1113,7 @@
                                         <div class="o-content">
                                             <div class="o-content__body">
                                                 <a href="#" target="_blank" class="t-link-container">
-                                                    <h4>Email</h4>
+                                                    <h4 class="email"></h4>
                                                     <p>
                                                         <span class="t-link-container__item--blended">
                                                             jhulian10@gmail.com
@@ -1165,8 +1126,7 @@
 
                                 </div><!-- /o-grid -->
                                 
-                                <a style="font-size: 17px;" href="https://drive.google.com/u/0/uc?id=1FpbhdD7l1lgtCTv5LgqfWtH7ank8ta4J&export=download">
-                                    Save as PDF
+                                <a id="saveaspdf" style="font-size: 17px;" href="https://drive.google.com/u/0/uc?id=1FpbhdD7l1lgtCTv5LgqfWtH7ank8ta4J&export=download">
                                 </a>
                                 
                             </div><!-- /c-footer__contact -->
