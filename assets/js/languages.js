@@ -1,16 +1,28 @@
-
-
+var currentTheme='dark';
+var currentLanguage='sp';
 
 $(document).ready(function() {
     $(window).load(function() {
         toSpanish();
+        $('#theme_btn').attr("src", "assets/images/header/light-off.png");
     });
 });
 
+function swapStyleSheet(sheet){
+    if(this.currentTheme=='dark'){
+        document.getElementById('pagestyle').setAttribute('href', 'assets/css/themes.light.css');
+        this.currentTheme='light'
+        $('#theme_btn').attr("src", "https://img.icons8.com/doodle/48/000000/light-on--v1.png");
+    }else{
+        document.getElementById('pagestyle').setAttribute('href', 'assets/css/themes.dark.css');
+        this.currentTheme='dark';
+        $('#theme_btn').attr("src", "assets/images/header/light-off.png");
+    }
+}
 
 
 function toEnlgish(){
-
+    this.currentLanguage = 'en';
     //Main
     $('#job_desc').text("Senior Java Developer");
 
@@ -124,6 +136,7 @@ function toEnlgish(){
 }
 
 function toSpanish(){
+    this.currentLanguage = 'sp';
 
     //Main
     $('#job_desc').text("Desarrollador Java Senior");
